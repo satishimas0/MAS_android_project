@@ -1,0 +1,24 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#	new file:   MASandroidproject/.gitignore
+#	new file:   MASandroidproject/.idea/compiler.xml
+#	new file:   MASandroidproject/.idea/copyright/profiles_settings.xml
+#	new file:   MASandroidproject/.idea/gradle.xml
+#	new file:   MASandroidproject/.idea/misc.xml
+#	new file:   MASandroidproject/.idea/modules.xml
+#	new file:   MASandroidproject/.idea/runConfigurations.xml
+#	new file:   MASandroidproject/.idea/vcs.xml
+#
+# Untracked files:
+#	MASandroidproject/app/
+#	MASandroidproject/build.gradle
+#	MASandroidproject/gradle.properties
+#	MASandroidproject/gradle/
+#	MASandroidproject/gradlew
+#	MASandroidproject/gradlew.bat
+#	MASandroidproject/settings.gradle
+#
+
