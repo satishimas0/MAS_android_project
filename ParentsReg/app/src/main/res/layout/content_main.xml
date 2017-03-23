@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="trainedge.parentsreg.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="493dp"
+        android:layout_height="667dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/pr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Parent's Registration"
+            android:textSize="@android:dimen/app_icon_size"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/pr"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Father/Mother Name :" />
+
+        <EditText
+            android:id="@+id/Mn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/nm"
+            android:drawableLeft="@drawable/ic_phone_android_black_24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Mob No. :" />
+
+        <EditText
+            android:id="@+id/Em"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Mn"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Email Id :" />
+
+        <EditText
+            android:id="@+id/Sn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Em"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Student Name :" />
+
+        <Button
+            android:id="@+id/sb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Sn"
+            android:layout_marginLeft="58dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="25dp"
+            android:text="Submit" />
+
+        <Button
+            android:id="@+id/rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/sb"
+            android:layout_alignBottom="@+id/sb"
+            android:layout_marginLeft="55dp"
+            android:layout_marginStart="55dp"
+            android:layout_toEndOf="@+id/sb"
+            android:layout_toRightOf="@+id/sb"
+            android:text="Reset" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
