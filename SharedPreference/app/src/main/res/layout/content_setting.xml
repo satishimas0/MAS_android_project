@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="traindge.sharedpreference.SettingActivity"
+    tools:showIn="@layout/activity_setting"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="default email address"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="6dp"
+        tools:layout_editor_absoluteY="45dp"
+        tools:layout_editor_absoluteX="48dp" />
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Email Address"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="73dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only Allow Downloading using wifi"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="147dp"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="When check allow downloading in wifi only"
+        android:textSize="16sp"
+        android:layout_marginEnd="7dp"
+        tools:layout_editor_absoluteY="173dp"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Allow autometic cloud sync"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="6dp"
+        tools:layout_editor_absoluteY="206dp"
+        tools:layout_editor_absoluteX="48dp" />
+
+    <Switch
+        android:id="@+id/btnwifiSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:checked="true"
+        tools:layout_editor_absoluteX="328dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <Switch
+        android:id="@+id/cldButtonSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:checked="true"
+        tools:layout_editor_absoluteX="324dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/ic_mail_black_24dp"
+        tools:layout_editor_absoluteY="44dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_signal_wifi_1_bar_black_24dp"
+        tools:layout_editor_absoluteY="149dp"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_cloud_black_24dp"
+        tools:layout_editor_absoluteY="206dp"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/ic_delete_black_24dp"
+        android:layout_marginStart="46dp"
+        tools:layout_editor_absoluteY="431dp"
+        tools:layout_editor_absoluteX="61dp" />
+
+    <Button
+        android:id="@+id/btnClearSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear Setting"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="424dp" />
+
+</android.support.constraint.ConstraintLayout>
