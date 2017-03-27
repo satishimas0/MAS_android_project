@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?android:attr/colorPrimary"
     tools:context="traindge.masandroidproject.feedback_activity">
 
 </android.support.constraint.ConstraintLayout>
