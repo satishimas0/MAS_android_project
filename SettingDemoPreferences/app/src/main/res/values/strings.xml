@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SettingDemoPreferences</string>
+    <string name="title_activity_setting">Setting</string>
+</resources>
