@@ -25,7 +25,21 @@
             </intent-filter>
         </activity>
         <activity android:name=".AboutActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".FeddbackActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".StudentRegistrationActivity"
+            android:label="@string/title_activity_student_registration"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TeacherRegistrationActivity"
+            android:label="@string/title_activity_teacher_registration"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ParentRegistrationActivity"
+            android:label="@string/title_activity_parent_registration"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
