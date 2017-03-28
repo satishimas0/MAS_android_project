@@ -18,4 +18,9 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_teacher">TeacherActivity</string>
     <string name="title_activity_parnt_registration">ParntRegistrationActivity</string>
+    <string name="title_activity_student_reg_">student_reg_Activity</string>
+    <string name="title_activity_student_registration">StudentRegistrationActivity</string>
+    <string name="title_activity_teacher_registration">TeacherRegistrationActivity</string>
+    <string name="send">send</string>
+    <string name="title_activity_parent_registration">ParentRegistrationActivity</string>
 </resources>
