@@ -23,4 +23,5 @@
     <string name="title_activity_teacher_registration">TeacherRegistrationActivity</string>
     <string name="send">send</string>
     <string name="title_activity_parent_registration">ParentRegistrationActivity</string>
+    <string name="auth_failed">Failed to register</string>
 </resources>

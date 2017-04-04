@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/actionModeSplitBackground"
-    tools:context="traindge.masandroidproject.FeddbackActivity">
+    tools:context="traindge.masandroidproject.FeedbackActivity">
 
     <TextView
         android:id="@+id/textView2"
@@ -21,7 +21,7 @@
         tools:layout_editor_absoluteY="28dp" />
 
     <EditText
-        android:id="@+id/subjectFeedbackET"
+        android:id="@+id/et_subjectfeedback"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:background="?attr/colorPrimary"
@@ -35,7 +35,7 @@
         tools:layout_editor_absoluteY="116dp" />
 
     <TextView
-        android:id="@+id/msgFeedbackTV"
+        android:id="@+id/tvfeedbackMsg"
         android:layout_width="350dp"
         android:layout_height="200dp"
         android:background="?attr/colorPrimary"
@@ -46,7 +46,7 @@
         tools:layout_editor_absoluteY="180dp" />
 
     <Button
-        android:id="@+id/feedbackSendButton"
+        android:id="@+id/btn_feedback_send"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@android:color/holo_blue_bright"

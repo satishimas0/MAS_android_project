@@ -22,7 +22,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <EditText
-        android:id="@+id/teacherNameET"
+        android:id="@+id/etTchrName"
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:ems="20"
@@ -42,7 +42,7 @@
         tools:layout_editor_absoluteY="76dp" />
 
     <EditText
-        android:id="@+id/tchrMobileNoET"
+        android:id="@+id/etTchrMobile"
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:ems="10"
@@ -63,7 +63,7 @@
         tools:layout_editor_absoluteY="129dp" />
 
     <EditText
-        android:id="@+id/tchrEmail_idET"
+        android:id="@+id/etTchrEmail_id"
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:ems="25"
@@ -84,7 +84,7 @@
         tools:layout_editor_absoluteY="180dp" />
 
     <EditText
-        android:id="@+id/collegeNameET"
+        android:id="@+id/etClgName"
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:ems="30"
@@ -106,7 +106,7 @@
 
 
     <EditText
-        android:id="@+id/highestQualiET"
+        android:id="@+id/etHqualification"
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:ems="10"
@@ -127,7 +127,7 @@
         tools:layout_editor_absoluteY="291dp" />
 
     <Button
-        android:id="@+id/tchrSubmitButton"
+        android:id="@+id/btnTchrSubmit"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@android:color/holo_blue_bright"
@@ -135,6 +135,26 @@
         android:textSize="20sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="390dp" />
+        tools:layout_editor_absoluteY="445dp" />
+
+    <EditText
+        android:id="@+id/et_TchrPassword"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="339dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/password_icon"
+        tools:layout_editor_absoluteY="339dp"
+        tools:layout_editor_absoluteX="16dp" />
 
 </android.support.constraint.ConstraintLayout>

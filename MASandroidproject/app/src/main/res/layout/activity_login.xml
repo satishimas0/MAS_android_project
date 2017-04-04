@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
-    tools:context="traindge.masandroidproject.LoginActivity">
+    android:background="?attr/actionModeSplitBackground">
 
     <TextView
-        android:id="@+id/password_tv"
+        android:id="@+id/tv_password"
         android:layout_width="260dp"
         android:layout_height="50dp"
         android:background="@android:color/background_light"
@@ -20,7 +19,7 @@
         tools:layout_editor_absoluteY="125dp" />
 
     <TextView
-        android:id="@+id/username_tv"
+        android:id="@+id/tvUserName"
         android:layout_width="260dp"
         android:layout_height="50dp"
         android:background="@android:color/background_light"
@@ -30,6 +29,35 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="58dp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Login"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="263dp" />
+
+    <Button
+        android:id="@+id/btn_forgt_password"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Forgot your password "
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="SignUp"
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="350dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -45,44 +73,15 @@
         android:layout_height="50dp"
         app:srcCompat="@drawable/password_icon"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="125dp" />
-
-    <Button
-        android:id="@+id/login_btn"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@android:color/holo_blue_bright"
-        android:text="Login"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="257dp" />
+        tools:layout_editor_absoluteY="133dp" />
 
     <ImageView
-        android:id="@+id/googllogin_imgview"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:background="@android:color/holo_blue_bright"
+        android:id="@+id/img_google_sign_in"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
         app:srcCompat="@drawable/google_icon"
-        tools:layout_editor_absoluteX="255dp"
-        tools:layout_editor_absoluteY="257dp" />
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="262dp" />
 
-    <Button
-        android:id="@+id/frgt_btn"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:background="@android:color/holo_blue_bright"
-        android:text="Forgot your password "
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="350dp" />
-
-    <Button
-        android:id="@+id/signup_btn"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:background="@android:color/holo_blue_bright"
-        android:text="SignUp"
-        tools:layout_editor_absoluteX="255dp"
-        tools:layout_editor_absoluteY="350dp" />
 
 </android.support.constraint.ConstraintLayout>
