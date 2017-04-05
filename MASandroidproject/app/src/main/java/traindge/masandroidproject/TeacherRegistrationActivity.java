@@ -71,7 +71,6 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
         };
 
 
-
         btnTchrSubmit.setOnClickListener(this);
     }
 
@@ -94,11 +93,11 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
 
         final String email = etTchrEmail_id.getText().toString();
         String password = et_tchrPassword.getText().toString();
-        final String TeacherName= etTchrName.getText().toString();
-        final String college= etClgName.getText().toString();
-        final String HQualification= etHqualification.getText().toString();
-        final String mobileNumber= etTchrMobile.getText().toString();
-
+        final String TeacherName = etTchrName.getText().toString();
+        final String college = etClgName.getText().toString();
+        final String HQualification = etHqualification.getText().toString();
+        final String mobileNumber = etTchrMobile.getText().toString();
+        Log.e(TAG,email);
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -109,24 +108,23 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
-                            Toast.makeText(TeacherRegistrationActivity.this, R.string.auth_failed,
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(TeacherRegistrationActivity.this, R.string.auth_failed+task.getResult().toString(), Toast.LENGTH_SHORT).show();
                         }
-
-                        String uid = task.getResult().getUser().getUid();
-                        HashMap<String, String> usermap= new HashMap<String, String>();
-                        usermap.put("email",email);
-                        usermap.put("mobile",mobileNumber);
-                        usermap.put("name",TeacherName);
-                        usermap.put("college",college);
-                        usermap.put("qualification",HQualification);
-                        FirebaseDatabase.getInstance().getReference("users").child("teachers").child(uid).setValue(usermap, new DatabaseReference.CompletionListener() {
-                            @Override
-                            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                                Toast.makeText(TeacherRegistrationActivity.this, "Saved", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
+                        if (task.isSuccessful()) {
+                            String uid = task.getResult().getUser().getUid();
+                            HashMap<String, String> usermap = new HashMap<String, String>();
+                            usermap.put("email", email);
+                            usermap.put("mobile", mobileNumber);
+                            usermap.put("name", TeacherName);
+                            usermap.put("college", college);
+                            usermap.put("qualification", HQualification);
+                            FirebaseDatabase.getInstance().getReference("users").child("teachers").child(uid).setValue(usermap, new DatabaseReference.CompletionListener() {
+                                @Override
+                                public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                    Toast.makeText(TeacherRegistrationActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
                     }
                 });
     }
