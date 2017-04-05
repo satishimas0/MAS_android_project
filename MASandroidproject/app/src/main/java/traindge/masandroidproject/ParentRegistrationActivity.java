@@ -3,11 +3,10 @@ package traindge.masandroidproject;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class ParentRegistrationActivity extends AppCompatActivity implements View.OnClickListener {
+public class ParentRegistrationActivity extends AppCompatActivity {
 
     private EditText et_parent;
     private EditText etStudentName;
@@ -29,16 +28,6 @@ public class ParentRegistrationActivity extends AppCompatActivity implements Vie
         etParentEmail_id = (EditText)findViewById(R.id.etParentEmail_id);
         etClgName = (EditText)findViewById(R.id.etClgName);
         btn_parentSubmit = (Button) findViewById(R.id.btn_parentSubmit);
-        btn_parentSubmit.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View view) {
-
-        switch (view.getId()) {
-            case R.id.btn_parentSubmit;
-
-                break;
-
-        }
 }

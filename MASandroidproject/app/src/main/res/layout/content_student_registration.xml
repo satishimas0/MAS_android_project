@@ -19,7 +19,10 @@
         android:textSize="30sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/etStdName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
 
     <EditText
         android:id="@+id/etStdName"
@@ -30,16 +33,20 @@
         android:inputType="textPersonName"
         android:textColorHint="@android:color/black"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="76dp" />
+        tools:layout_editor_absoluteY="76dp"
+        app:layout_constraintLeft_toRightOf="@+id/imageView3"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="50dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/user_id_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="76dp" />
+        tools:layout_editor_absoluteY="76dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/etparentName"
@@ -144,8 +151,11 @@
         android:layout_width="50dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/class_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="340dp" />
+        tools:layout_editor_absoluteY="340dp"
+        app:layout_constraintRight_toLeftOf="@+id/etClass"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/btnStdSubmit"
@@ -155,8 +165,15 @@
         android:text="Submit"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="445dp" />
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/etStudentPassword"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/etStudentPassword"
+        app:layout_constraintHorizontal_bias="0.502" />
 
     <EditText
         android:id="@+id/etStudentPassword"
@@ -168,8 +185,11 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="387dp" />
+        tools:layout_editor_absoluteY="387dp"
+        app:layout_constraintLeft_toRightOf="@+id/imageView10"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
         android:id="@+id/imageView10"
