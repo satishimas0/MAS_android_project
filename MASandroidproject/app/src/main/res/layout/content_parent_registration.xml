@@ -11,39 +11,66 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="360dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:background="@android:color/holo_blue_bright"
         android:gravity="center"
         android:text="Parent Registration"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp" />
 
     <EditText
         android:id="@+id/et_parent"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:ems="20"
         android:hint="      Father/Mother Name"
         android:inputType="textPersonName"
         android:textColorHint="@android:color/black"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="76dp" />
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageView3"
+        android:layout_marginLeft="8dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/etParentMoile"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginTop="76dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="79dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.09" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="50dp"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
         app:srcCompat="@drawable/user_id_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="76dp" />
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_parent"
+        app:layout_constraintTop_toTopOf="@+id/et_parent" />
 
     <EditText
         android:id="@+id/etStudentName"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:ems="20"
         android:gravity="center"
@@ -51,20 +78,48 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="131dp" />
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="59dp"
+        app:layout_constraintLeft_toRightOf="@+id/imageView5"
+        android:layout_marginLeft="8dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="19dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etParentMoile"
+        android:layout_marginEnd="19dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/et_parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="50dp"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
         app:srcCompat="@drawable/father_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="131dp" />
+        app:layout_constraintRight_toLeftOf="@+id/et_parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etStudentName"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/etParentMoile"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:ems="10"
         android:gravity="center"
@@ -72,20 +127,36 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="183dp" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/etParentEmail_id"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintLeft_toRightOf="@+id/imageView6" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="50dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/phone_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="183dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/imageView5"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <EditText
         android:id="@+id/etParentEmail_id"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:ems="25"
         android:gravity="center"
@@ -93,20 +164,35 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="235dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/etParentMoile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginRight="8dp"
+        app:layout_constraintVertical_bias="0.562" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="50dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/mail_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="235dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/imageView6"
+        android:layout_marginTop="29dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <EditText
         android:id="@+id/et_clgName"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:ems="30"
         android:gravity="center"
@@ -114,16 +200,29 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="287dp" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/etParentEmail_id"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/etParentEmail_id"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/etParentEmail_id"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_parentSubmit" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="50dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/college_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="287dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/imageView7"
+        android:layout_marginTop="34dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="0.0" />
 
 
     <Button
@@ -134,8 +233,16 @@
         android:text="Submit"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="412dp" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="105dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="49dp"
+        android:layout_marginRight="105dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="1.0" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -38,10 +38,6 @@
             android:name=".ParentRegistrationActivity"
             android:label="@string/title_activity_parent_registration"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".RegOptionPage"
-            android:label="@string/title_activity_reg_option_page"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
