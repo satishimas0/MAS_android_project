@@ -1,13 +1,16 @@
 package traindge.masandroidproject;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BaseTransientBottomBar;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,7 +33,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
-    public static final int RC_SIGN_IN=7283;
+    public static final int RC_SIGN_IN = 7283;
     public static final String TAG = "LoginActivity";
     private TextView tvUserName;
     private TextView tv_passord;
@@ -48,8 +51,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //create object
-        tvUserName = (TextView)findViewById(R.id.tvUserName);
-        tv_passord = (TextView)findViewById(R.id.tv_password);
+        tvUserName = (TextView) findViewById(R.id.tvUserName);
+        tv_passord = (TextView) findViewById(R.id.tv_password);
         btn_login = (Button) findViewById(R.id.btn_login);
         img_google_sign_in = (ImageView) findViewById(R.id.img_google_sign_in);
         btn_forgt_password = (Button) findViewById(R.id.btn_forgt_password);
@@ -92,7 +95,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         };
 
         //final line
-       img_google_sign_in.setOnClickListener(this);
+        img_google_sign_in.setOnClickListener(this);
 
 
     }
@@ -115,13 +118,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
             }
-                // Google Sign In failed, update UI appropriately
-                // ...
-            }
+            // Google Sign In failed, update UI appropriately
+            // ...
         }
+    }
 
-        // Pass the activity result back to the Facebook SDK
-        //mFacebookCallbackManager.onActivityResult(requestCode, resultCode, data);
+    // Pass the activity result back to the Facebook SDK
+    //mFacebookCallbackManager.onActivityResult(requestCode, resultCode, data);
 
     @Override
     public void onStart() {
@@ -161,15 +164,45 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.img_google_sign_in:
                 signIn();
                 break;
-
+            case R.id.btn_signup:
+                showOptions();
+                break;
         }
+
+    }
+
+    private void showOptions() {
+        String[] options = new String[]{"Student", "Teacher", "Parent"};
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("Select")
+                .setAdapter(new ArrayAdapter<String>(LoginActivity.this, android.R.layout.simple_list_item_1, options), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0:
+                                //// TODO: 4/5/2017 Student registration
+                                Intent subIntent=new Intent(LoginActivity.this,TeacherRegistrationActivity.class);
+                                startActivity(subIntent);
+                                break;
+                            case 1:
+                           subIntent = new Intent(LoginActivity.this, StudentRegistrationActivity.class);
+                                startActivity(subIntent);
+
+                                break;
+                            case 2:
+                                subIntent = new Intent(LoginActivity.this, ParentRegistrationActivity.class);
+                                startActivity(subIntent);
+                                break;
+                        }
+                    }
+                }).create();
+        dialog.show();
     }
 
 

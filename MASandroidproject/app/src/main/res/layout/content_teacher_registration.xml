@@ -142,6 +142,7 @@
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="Password"
         android:inputType="textPersonName"
         android:textSize="20sp"

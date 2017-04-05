@@ -120,7 +120,7 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
                         usermap.put("name",TeacherName);
                         usermap.put("college",college);
                         usermap.put("qualification",HQualification);
-                        FirebaseDatabase.getInstance().getReference("users").child(uid).setValue(usermap, new DatabaseReference.CompletionListener() {
+                        FirebaseDatabase.getInstance().getReference("users").child("teachers").child(uid).setValue(usermap, new DatabaseReference.CompletionListener() {
                             @Override
                             public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                                 Toast.makeText(TeacherRegistrationActivity.this, "Saved", Toast.LENGTH_SHORT).show();

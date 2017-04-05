@@ -155,7 +155,28 @@
         android:text="Submit"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="412dp" />
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="445dp" />
+
+    <EditText
+        android:id="@+id/etStudentPassword"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/password_icon"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="395dp" />
 
 </android.support.constraint.ConstraintLayout>
