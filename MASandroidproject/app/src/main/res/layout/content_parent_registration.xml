@@ -18,8 +18,11 @@
         android:text="Parent Registration"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
 
     <EditText
         android:id="@+id/et_parent"
@@ -38,8 +41,11 @@
         android:layout_width="50dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/user_id_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="76dp" />
+        tools:layout_editor_absoluteY="76dp"
+        app:layout_constraintRight_toLeftOf="@+id/et_parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/etStudentName"
@@ -52,15 +58,19 @@
         android:textSize="20sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="131dp" />
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/etParentMoile" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="50dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/father_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="131dp" />
+        tools:layout_editor_absoluteY="131dp"
+        app:layout_constraintRight_toLeftOf="@+id/etStudentName"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/etParentMoile"
@@ -72,16 +82,19 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="183dp" />
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="175dp" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="50dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/phone_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="183dp" />
+        tools:layout_editor_absoluteY="183dp"
+        app:layout_constraintRight_toLeftOf="@+id/etParentMoile"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/etParentEmail_id"
@@ -101,8 +114,11 @@
         android:layout_width="50dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/mail_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="235dp" />
+        tools:layout_editor_absoluteY="235dp"
+        app:layout_constraintRight_toLeftOf="@+id/etParentEmail_id"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/et_clgName"
@@ -122,8 +138,11 @@
         android:layout_width="50dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/college_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="287dp" />
+        tools:layout_editor_absoluteY="287dp"
+        app:layout_constraintRight_toLeftOf="@+id/et_clgName"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 
     <Button
@@ -134,8 +153,14 @@
         android:text="Submit"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="412dp" />
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/et_clgName"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_clgName" />
 
 
 </android.support.constraint.ConstraintLayout>

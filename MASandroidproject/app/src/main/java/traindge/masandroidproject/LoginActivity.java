@@ -96,7 +96,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         //final line
         img_google_sign_in.setOnClickListener(this);
-
+        btn_signup.setOnClickListener(this);
 
     }
 
@@ -187,11 +187,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         switch (which) {
                             case 0:
                                 //// TODO: 4/5/2017 Student registration
-                                Intent subIntent=new Intent(LoginActivity.this,TeacherRegistrationActivity.class);
+                                Intent subIntent = new Intent(LoginActivity.this, TeacherRegistrationActivity.class);
                                 startActivity(subIntent);
                                 break;
                             case 1:
-                           subIntent = new Intent(LoginActivity.this, StudentRegistrationActivity.class);
+                                subIntent = new Intent(LoginActivity.this, StudentRegistrationActivity.class);
                                 startActivity(subIntent);
 
                                 break;
