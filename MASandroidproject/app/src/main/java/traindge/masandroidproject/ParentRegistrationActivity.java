@@ -14,6 +14,9 @@ public class ParentRegistrationActivity extends AppCompatActivity {
     private EditText etParentEmail_id;
     private EditText etClgName;
     private Button btn_parentSubmit;
+    private EditText etParentName;
+    private EditText etParentEmail;
+    private Button btnParentSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +25,12 @@ public class ParentRegistrationActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        et_parent = (EditText)findViewById(R.id.et_parent);
+        etParentName = (EditText)findViewById(R.id.etParentName);
         etStudentName = (EditText)findViewById(R.id.etStudentName);
-        etParentMoile = (EditText)findViewById(R.id.etParentMoile);
-        etParentEmail_id = (EditText)findViewById(R.id.etParentEmail_id);
+        etParentMoile = (EditText)findViewById(R.id.etParentMobile);
+        etParentEmail = (EditText)findViewById(R.id.etParentEmail);
         etClgName = (EditText)findViewById(R.id.etClgName);
-        btn_parentSubmit = (Button) findViewById(R.id.btn_parentSubmit);
+        btnParentSubmit = (Button) findViewById(R.id.btnParentSubmit);
     }
 
 }

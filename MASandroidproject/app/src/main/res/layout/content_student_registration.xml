@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,196 +7,173 @@
     android:background="?attr/actionModeSplitBackground"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="traindge.masandroidproject.StudentRegistrationActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp"
     tools:showIn="@layout/activity_student_registration">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="360dp"
-        android:layout_height="40dp"
-        android:background="@android:color/holo_blue_bright"
-        android:gravity="center"
-        android:text="Student Registration"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="12dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/etStdName"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp" />
-
-    <EditText
-        android:id="@+id/etStdName"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:ems="20"
-        android:hint="               Student Name"
-        android:inputType="textPersonName"
-        android:textColorHint="@android:color/black"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteY="76dp"
-        app:layout_constraintLeft_toRightOf="@+id/imageView3"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/user_id_icon"
-        tools:layout_editor_absoluteY="76dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <EditText
-        android:id="@+id/etparentName"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:ems="20"
-        android:gravity="center"
-        android:hint="Father/Mother Name"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="131dp" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/father_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="131dp" />
-
-    <EditText
-        android:id="@+id/etStdMobile"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Mobile Number"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="183dp" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/phone_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="183dp" />
-
-    <EditText
-        android:id="@+id/etStdEmail_id"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:ems="25"
-        android:gravity="center"
-        android:hint="Email_id"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="235dp" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/mail_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="235dp" />
-
-    <EditText
-        android:id="@+id/etClgname"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:ems="30"
-        android:gravity="center"
-        android:hint="College Name"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="287dp" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/college_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="287dp" />
-
-
-    <EditText
-        android:id="@+id/etClass"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Class"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="340dp" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/class_icon"
-        tools:layout_editor_absoluteY="340dp"
-        app:layout_constraintRight_toLeftOf="@+id/etClass"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <Button
-        android:id="@+id/btnStdSubmit"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@android:color/holo_blue_bright"
-        android:text="Submit"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="@+id/etStudentPassword"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView10"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/etStudentPassword"
-        app:layout_constraintHorizontal_bias="0.502" />
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
 
-    <EditText
-        android:id="@+id/etStudentPassword"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteY="387dp"
-        app:layout_constraintLeft_toRightOf="@+id/imageView10"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/holo_blue_bright"
+            android:gravity="center"
+            android:text="Student Registration"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="8dp" />
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/password_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="395dp" />
+        <EditText
+            android:id="@+id/etStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:ems="20"
+            android:hint="Student Name"
+            android:inputType="textPersonName"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/white"
+            android:textColorHint="#aaa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="65dp" />
 
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/etStudentClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="20"
+            android:hint="Class"
+            android:inputType="textPersonName"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/white"
+            android:textColorHint="#aaa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="65dp" />
+
+        <EditText
+            android:id="@+id/etStdParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Parent Name"
+            android:inputType="textPersonName"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/white"
+            android:textColorHint="#aaa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="280dp" />
+
+        <EditText
+            android:id="@+id/etStudentMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Mobile Number"
+            android:inputType="textPersonName"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/white"
+            android:textColorHint="#aaa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <EditText
+            android:id="@+id/etStudentEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ems="25"
+            android:gravity="center"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/white"
+            android:textColorHint="#aaa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="169dp" />
+
+        <EditText
+            android:id="@+id/etClgName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="30"
+            android:gravity="center"
+            android:hint="College Name"
+            android:inputType="textPersonName"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/white"
+            android:textColorHint="#aaa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="224dp" />
+
+
+        <EditText
+            android:id="@+id/etStudentPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/white"
+            android:textColorHint="#aaa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="88dp"
+            tools:layout_editor_absoluteY="328dp" />
+
+        <Button
+            android:id="@+id/btnStudentSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/holo_blue_bright"
+            android:text="Submit"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="117dp"
+            tools:layout_editor_absoluteY="415dp" />
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
