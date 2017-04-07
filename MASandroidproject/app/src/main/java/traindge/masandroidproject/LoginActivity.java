@@ -184,7 +184,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         switch (which) {
                             case 0:
                                 //// TODO: 4/5/2017 Student registration
-                                Intent subIntent = new Intent(LoginActivity.this,StudentRegistrationActivity.class);
+                                Intent subIntent = new Intent(LoginActivity.this, StudentRegistrationActivity.class);
                                 startActivity(subIntent);
                                 break;
                             case 1:
