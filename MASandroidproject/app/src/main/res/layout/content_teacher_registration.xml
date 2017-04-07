@@ -52,14 +52,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="16dp"
             android:drawableLeft="@drawable/ic_person_black_24dp"
             android:ems="20"
+            android:gravity="center"
             android:hint="Teacher Name"
             android:inputType="textPersonName"
+<<<<<<< HEAD
             android:textAlignment="textStart"
             android:textColor="@color/common_google_signin_btn_text_dark_disabled"
             android:textColorHint="#aaa"
+=======
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+>>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textSize="20sp"
             tools:layout_editor_absoluteX="66dp"
             tools:layout_editor_absoluteY="65dp" />
@@ -69,13 +77,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="16dp"
             android:drawableLeft="@drawable/ic_phone_android_black_24dp"
             android:ems="10"
             android:gravity="center"
             android:hint="Mobile Number"
             android:inputType="textPersonName"
+<<<<<<< HEAD
             android:textAlignment="textStart"
+=======
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+>>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textColorHint="#aaa"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -87,13 +101,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="16dp"
             android:drawableLeft="@drawable/ic_email_black_24dp"
             android:ems="25"
             android:gravity="center"
             android:hint="Email"
             android:inputType="textPersonName"
+<<<<<<< HEAD
             android:textAlignment="textStart"
+=======
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+>>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textColorHint="#aaa"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -105,13 +125,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="16dp"
             android:drawableLeft="@drawable/ic_school_black_24dp"
             android:ems="30"
             android:gravity="center"
             android:hint="College Name"
             android:inputType="textPersonName"
+<<<<<<< HEAD
             android:textAlignment="textStart"
+=======
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+>>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textColorHint="#aaa"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -123,13 +149,19 @@
             android:id="@+id/etHqualification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="16dp"
             android:drawableLeft="@drawable/ic_school_black_24dp"
             android:ems="10"
             android:gravity="center"
             android:hint="Highest Qualification"
             android:inputType="textPersonName"
+<<<<<<< HEAD
             android:textAlignment="textStart"
+=======
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+>>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textColorHint="#aaa"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -140,13 +172,19 @@
             android:id="@+id/et_TchrPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="16dp"
             android:drawableLeft="@drawable/ic_visibility_black_24dp"
             android:ems="10"
             android:gravity="center"
             android:hint="Password"
             android:inputType="textPersonName"
+<<<<<<< HEAD
             android:textAlignment="textStart"
+=======
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+>>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textColorHint="#aaa"
             android:textSize="20sp"
             android:textStyle="bold"
