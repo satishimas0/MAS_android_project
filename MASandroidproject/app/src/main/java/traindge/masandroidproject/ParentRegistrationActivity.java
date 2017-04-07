@@ -8,16 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
 
 public class ParentRegistrationActivity extends AppCompatActivity implements FirebaseAuth.AuthStateListener, View.OnClickListener {
 
@@ -40,12 +36,12 @@ public class ParentRegistrationActivity extends AppCompatActivity implements Fir
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //create object
-        et_parent = (EditText) findViewById(R.id.et_parent);
+        et_parent = (EditText) findViewById(R.id.etParentName);
         etStudentName = (EditText) findViewById(R.id.etStudentName);
-        etParentMoile = (EditText) findViewById(R.id.etParentMoile);
-        etParentEmail_id = (EditText) findViewById(R.id.etParentEmail_id);
+        etParentMoile = (EditText) findViewById(R.id.etParentMobile);
+        etParentEmail_id = (EditText) findViewById(R.id.etParentEmail);
         etClgName = (EditText) findViewById(R.id.etClgName);
-        btn_parentSubmit = (Button) findViewById(R.id.btn_parentSubmit);
+        btn_parentSubmit = (Button) findViewById(R.id.btnParentSubmit);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -91,24 +87,6 @@ btn_parentSubmit.setOnClickListener(this);
        final String studentname = etStudentName.getText().toString();
        final String submit = btn_parentSubmit.getText().toString();
        final String college = etClgName.getText().toString();
-    Log.e(TAG,email);
-        authResultTask = mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, (task)
-        Log.d(TAG,"createUserWithEmail:onComplete:"+task.is)
-        // If signin fails, display a message to the user. if signin succeed
-                // the auth state listener will be notified and logic to handle the
-                // signed in user can be handled in the listener.
-                if(task.isSuccessful){
-            String  uid = task.getResult().getUser().getUid();
-                    HashMap<String,String>Usermap=new HashMap<>();
-            usermap.put("email",email);
-            usermap.put("mobile",mobileno);
-            usermap.put("parentname",parentname);
-            usermap.put("studentname",studentname);
-            usermap.put("college",college);
-                    FirebaseDatabase.getInstance().getReference("user").child("parent").child(uid).setValue(usermap,(completionListener))
-                } Toast.makeText(ParentRegistrationActivity.this,"Saved",Toast.LENGTH_SHORT).show();
-
 
     }
 }

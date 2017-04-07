@@ -2,8 +2,6 @@ package traindge.masandroidproject;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -23,10 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
-import static traindge.masandroidproject.R.id.etStudentEmail;
-
 public class StudentRegistrationActivity extends AppCompatActivity implements View.OnClickListener {
-
+public static final String TAG="StudentRegistration";
     private EditText etparentName;
     private EditText etClgName;
     private FirebaseAuth mAuth;
@@ -61,11 +57,14 @@ public class StudentRegistrationActivity extends AppCompatActivity implements Vi
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
+
                 if (user != null) {
                     // User is signed in
                     //// TODO: 4/5/2017 INTENT
+                    Log.d(TAG,"onAuthStatechanged:signed_in"+user.getUid());
                 } else {
                     // User is signed out
+                    Log.d(TAG,"onAuthStateChanged:signed_out");
                 }
                 // ...
             }
@@ -129,6 +128,8 @@ public class StudentRegistrationActivity extends AppCompatActivity implements Vi
                             @Override
                             public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                                 Toast.makeText(StudentRegistrationActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+
+
                             }
                         });
 
