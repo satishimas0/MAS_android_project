@@ -11,11 +11,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="796dp"
-        android:layout_height="110dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/holo_blue_bright"
         android:gravity="center"
@@ -24,19 +22,18 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/etStdName"
-        app:layout_constraintHorizontal_bias="0.502"
+
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etStdName"
         android:layout_width="788dp"
-        android:layout_height="98dp"
+        android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_person_black_24dp"
         android:ems="20"
-        android:hint="               Student Name"
+        android:hint="Student Name"
         android:inputType="textPersonName"
         android:textColorHint="@android:color/black"
         android:textSize="20sp"
@@ -46,9 +43,11 @@
     <EditText
         android:id="@+id/etparentName"
         android:layout_width="799dp"
-        android:layout_height="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:drawableLeft="@drawable/ic_person_black_24dp"
         android:ems="20"
         android:gravity="center"
@@ -56,17 +55,19 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="246dp"
-        app:layout_constraintHorizontal_bias="0.0" />
+        tools:layout_editor_absoluteY="246dp" />
 
     <EditText
         android:id="@+id/etStdMobile"
         android:layout_width="798dp"
-        android:layout_height="98dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:drawableLeft="@drawable/phone_icon"
         android:ems="10"
         android:gravity="center"
@@ -74,17 +75,19 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="360dp"
-        app:layout_constraintHorizontal_bias="0.0" />
+        tools:layout_editor_absoluteY="360dp" />
 
     <EditText
         android:id="@+id/etStdEmail_id"
         android:layout_width="777dp"
-        android:layout_height="107dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:drawableLeft="@drawable/mail_icon"
         android:ems="25"
         android:gravity="center"
@@ -92,17 +95,19 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="470dp"
-        app:layout_constraintHorizontal_bias="0.0" />
+        tools:layout_editor_absoluteY="470dp" />
 
     <EditText
         android:id="@+id/etClgname"
         android:layout_width="783dp"
-        android:layout_height="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:drawableLeft="@drawable/ic_school_black_24dp"
         android:ems="30"
         android:gravity="center"
@@ -110,19 +115,20 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="589dp"
-        app:layout_constraintHorizontal_bias="0.533"
-        tools:layout_editor_absoluteX="4dp" />
+        tools:layout_editor_absoluteY="589dp" />
 
 
     <EditText
         android:id="@+id/etClass"
         android:layout_width="812dp"
-        android:layout_height="106dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
         android:drawableLeft="@drawable/ic_school_black_24dp"
         android:ems="20"
         android:gravity="center"
@@ -140,38 +146,41 @@
     <Button
         android:id="@+id/btnStdSubmit"
         android:layout_width="829dp"
-        android:layout_height="99dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/holo_blue_bright"
         android:text="Submit"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="@+id/etStudentPassword"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/etStudentPassword"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.116" />
+        app:layout_constraintRight_toRightOf="@+id/etStudentPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etStudentPassword"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/etStudentPassword"
         android:layout_width="794dp"
-        android:layout_height="99dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Password"
         android:inputType="textPersonName"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="851dp"
-        app:layout_constraintHorizontal_bias="0.02"
-        tools:layout_editor_absoluteX="-382dp" />
+        tools:layout_editor_absoluteY="851dp" />
 
 </android.support.constraint.ConstraintLayout>

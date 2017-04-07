@@ -59,15 +59,10 @@
             android:gravity="center"
             android:hint="Teacher Name"
             android:inputType="textPersonName"
-<<<<<<< HEAD
+
             android:textAlignment="textStart"
             android:textColor="@color/common_google_signin_btn_text_dark_disabled"
             android:textColorHint="#aaa"
-=======
-            android:textAlignment="gravity"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
->>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textSize="20sp"
             tools:layout_editor_absoluteX="66dp"
             tools:layout_editor_absoluteY="65dp" />
@@ -84,12 +79,6 @@
             android:gravity="center"
             android:hint="Mobile Number"
             android:inputType="textPersonName"
-<<<<<<< HEAD
-            android:textAlignment="textStart"
-=======
-            android:textAlignment="gravity"
-            android:textColor="@android:color/white"
->>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textColorHint="#aaa"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -108,12 +97,6 @@
             android:gravity="center"
             android:hint="Email"
             android:inputType="textPersonName"
-<<<<<<< HEAD
-            android:textAlignment="textStart"
-=======
-            android:textAlignment="gravity"
-            android:textColor="@android:color/white"
->>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textColorHint="#aaa"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -132,12 +115,6 @@
             android:gravity="center"
             android:hint="College Name"
             android:inputType="textPersonName"
-<<<<<<< HEAD
-            android:textAlignment="textStart"
-=======
-            android:textAlignment="gravity"
-            android:textColor="@android:color/white"
->>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textColorHint="#aaa"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -156,12 +133,6 @@
             android:gravity="center"
             android:hint="Highest Qualification"
             android:inputType="textPersonName"
-<<<<<<< HEAD
-            android:textAlignment="textStart"
-=======
-            android:textAlignment="gravity"
-            android:textColor="@android:color/white"
->>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textColorHint="#aaa"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -179,12 +150,6 @@
             android:gravity="center"
             android:hint="Password"
             android:inputType="textPersonName"
-<<<<<<< HEAD
-            android:textAlignment="textStart"
-=======
-            android:textAlignment="gravity"
-            android:textColor="@android:color/white"
->>>>>>> c21808f59045d546a8f118903a60bcb7ec00e87f
             android:textColorHint="#aaa"
             android:textSize="20sp"
             android:textStyle="bold"
