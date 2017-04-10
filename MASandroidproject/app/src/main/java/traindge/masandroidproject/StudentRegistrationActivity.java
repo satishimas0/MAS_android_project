@@ -34,7 +34,7 @@ public class StudentRegistrationActivity extends AppCompatActivity implements Vi
     private EditText etStudentMobile;
     private EditText etStudentName;
     private EditText etStudentClass;
-    private Button etStudentPassword;
+    private EditText etStudentPassword;
     private Button btnStudentSubmit;
     private EditText etStudentEmail;
 
@@ -54,7 +54,7 @@ public class StudentRegistrationActivity extends AppCompatActivity implements Vi
         etStudentEmail = (EditText)findViewById(R.id.etStudentEmail);
         etClgName = (EditText)findViewById(R.id.etClgName);
         etStudentClass = (EditText)findViewById(R.id.etStudentClass);
-        etStudentPassword = (Button) findViewById(R.id.etStudentPassword);
+        etStudentPassword = (EditText) findViewById(R.id.etStudentPassword);
         btnStudentSubmit = (Button) findViewById(R.id.btnStudentSubmit);
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {

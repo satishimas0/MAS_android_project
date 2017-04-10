@@ -25,4 +25,5 @@
     <string name="title_activity_parent_registration">ParentRegistrationActivity</string>
     <string name="auth_failed">Failed to register</string>
     <string name="title_activity_reg_option_page">RegOptionPage</string>
+    <string name="title_activity_class_system">classSystemActivity</string>
 </resources>

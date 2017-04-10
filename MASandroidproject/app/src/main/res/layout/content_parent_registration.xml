@@ -66,6 +66,24 @@
             tools:layout_editor_absoluteY="65dp" />
 
         <EditText
+            android:id="@+id/etStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:ems="20"
+            android:gravity="center"
+            android:hint="student Name"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textColorHint="#aaa"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="65dp" />
+
+        <EditText
             android:id="@+id/etParentMobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -124,7 +142,7 @@
 
 
         <EditText
-            android:id="@+id/et_TchrPassword"
+            android:id="@+id/etParentPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

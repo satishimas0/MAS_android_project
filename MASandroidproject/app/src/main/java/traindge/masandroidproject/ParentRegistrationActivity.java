@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -32,6 +34,14 @@ public class ParentRegistrationActivity extends AppCompatActivity implements Fir
     private FirebaseAuth.AuthStateListener mAuthListener;
     private Task<AuthResult> authResultTask;
     private OnCompleteListener<AuthResult> task;
+    private EditText etParentName;
+    private EditText etParentMobile;
+    private EditText etParentEmail;
+    private Button btnParentSubmit;
+    private EditText etParentPassword;
+
+    public ParentRegistrationActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +50,13 @@ public class ParentRegistrationActivity extends AppCompatActivity implements Fir
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //create object
-        et_parent = (EditText) findViewById(R.id.et_parent);
+        etParentName = (EditText) findViewById(R.id.etParentName);
         etStudentName = (EditText) findViewById(R.id.etStudentName);
-        etParentMoile = (EditText) findViewById(R.id.etParentMoile);
-        etParentEmail_id = (EditText) findViewById(R.id.etParentEmail_id);
+        etParentMobile = (EditText) findViewById(R.id.etParentMobile);
+        etParentEmail = (EditText) findViewById(R.id.etParentEmail);
         etClgName = (EditText) findViewById(R.id.etClgName);
-        btn_parentSubmit = (Button) findViewById(R.id.btn_parentSubmit);
+        etParentPassword = (EditText) findViewById(R.id.etParentPassword);
+        btnParentSubmit = (Button) findViewById(R.id.btnParentSubmit);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -85,30 +96,45 @@ btn_parentSubmit.setOnClickListener(this);
 
     @Override
     public void onClick(View view) {
-       final String email = etParentEmail_id.getText().toString();
-       final String mobileno = etParentMoile.getText().toString();
-      final   String parentname = et_parent.getText().toString();
+       final String parentname=etParentName.getText().toString();
+        final String email = etParentEmail.getText().toString();
+       final String mobile = etParentMoile.getText().toString();
        final String studentname = etStudentName.getText().toString();
-       final String submit = btn_parentSubmit.getText().toString();
+       final String password = etParentPassword.getText().toString();
+       final String submit = btnParentSubmit.getText().toString();
        final String college = etClgName.getText().toString();
-    Log.e(TAG,email);
-        authResultTask = mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, (task)
-        Log.d(TAG,"createUserWithEmail:onComplete:"+task.is)
-        // If signin fails, display a message to the user. if signin succeed
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                // If sign in fails, display a message to the user. If sign in succeeds
                 // the auth state listener will be notified and logic to handle the
                 // signed in user can be handled in the listener.
-                if(task.isSuccessful){
-            String  uid = task.getResult().getUser().getUid();
-                    HashMap<String,String>Usermap=new HashMap<>();
-            usermap.put("email",email);
-            usermap.put("mobile",mobileno);
-            usermap.put("parentname",parentname);
-            usermap.put("studentname",studentname);
-            usermap.put("college",college);
-                    FirebaseDatabase.getInstance().getReference("user").child("parent").child(uid).setValue(usermap,(completionListener))
-                } Toast.makeText(ParentRegistrationActivity.this,"Saved",Toast.LENGTH_SHORT).show();
+                if (!task.isSuccessful()) {
+                    Toast.makeText(ParentRegistrationActivity.this, R.string.auth_failed,
+                            Toast.LENGTH_SHORT).show();
+                }
 
+                String uid = task.getResult().getUser().getUid();
+                HashMap<String, String> usermap = new HashMap<String, String>();
+                usermap.put("email", email);
+                usermap.put("parent", parentname);
+                usermap.put("student", studentname);
+                usermap.put("college", college);
+                usermap.put("password", password);
+                usermap.put("mobile",mobile );
 
+                FirebaseDatabase.getInstance().getReference("users").child(uid).
+                        setValue(usermap, new DatabaseReference.CompletionListener() {
+                            @Override
+                            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                Toast.makeText(ParentRegistrationActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
+
+            }
+
+        });
     }
 }
