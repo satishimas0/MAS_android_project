@@ -32,8 +32,8 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
     private EditText etTchrEmail_id;
     private EditText etClgName;
     private EditText etHqualification;
+    private EditText etTchrPassword;
     private Button btnTchrSubmit;
-    private EditText et_tchrPassword;
 
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseAuth mAuth;
@@ -51,8 +51,8 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
         etTchrEmail_id = (EditText) findViewById(R.id.etTchrEmail_id);
         etClgName = (EditText) findViewById(R.id.etClgName);
         etHqualification = (EditText) findViewById(R.id.etHqualification);
+        etTchrPassword = (EditText) findViewById(R.id.etTchrPassword);
         btnTchrSubmit = (Button) findViewById(R.id.btnTchrSubmit);
-        et_tchrPassword = (EditText) findViewById(R.id.et_TchrPassword);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -92,7 +92,7 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
     public void onClick(View v) {
 
         final String email = etTchrEmail_id.getText().toString();
-        String password = et_tchrPassword.getText().toString();
+        final String password = etTchrPassword.getText().toString();
         final String TeacherName = etTchrName.getText().toString();
         final String college = etClgName.getText().toString();
         final String HQualification = etHqualification.getText().toString();
@@ -113,11 +113,12 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
                         if (task.isSuccessful()) {
                             String uid = task.getResult().getUser().getUid();
                             HashMap<String, String> usermap = new HashMap<String, String>();
-                            usermap.put("email", email);
-                            usermap.put("mobile", mobileNumber);
                             usermap.put("name", TeacherName);
+                            usermap.put("mobile", mobileNumber);
+                            usermap.put("email", email);
                             usermap.put("college", college);
                             usermap.put("qualification", HQualification);
+                            usermap.put("password",password);
                             FirebaseDatabase.getInstance().getReference("users").child("teachers").child(uid).setValue(usermap, new DatabaseReference.CompletionListener() {
                                 @Override
                                 public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {

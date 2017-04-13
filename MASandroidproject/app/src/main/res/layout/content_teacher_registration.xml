@@ -139,7 +139,7 @@
             tools:layout_editor_absoluteY="280dp" />
 
         <EditText
-            android:id="@+id/et_TchrPassword"
+            android:id="@+id/etTchrPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

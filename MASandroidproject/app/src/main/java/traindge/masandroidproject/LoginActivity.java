@@ -173,6 +173,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
     }
+// option users coding
 
     private void showOptions() {
         String[] options = new String[]{"Student", "Teacher", "Parent"};

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ParentRegistrationActivity extends AppCompatActivity implements FirebaseAuth.AuthStateListener, View.OnClickListener {
 
     public static final String TAG = "parentRegistration";
-    private EditText et_parent;
+    private EditText etParentName;
     private EditText etStudentName;
-    private EditText etParentMoile;
-    private EditText etParentEmail_id;
+    private EditText etParentEmail;
     private EditText etClgName;
-    private Button btn_parentSubmit;
+    private EditText etParentPassword;
+    private Button btnParentSubmit;
+
+
+
+
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private Task<AuthResult> authResultTask;
     private OnCompleteListener<AuthResult> task;
-    private EditText etParentName;
     private EditText etParentMobile;
-    private EditText etParentEmail;
-    private Button btnParentSubmit;
-    private EditText etParentPassword;
 
     public ParentRegistrationActivity() {
     }
@@ -49,6 +49,7 @@ public class ParentRegistrationActivity extends AppCompatActivity implements Fir
         setContentView(R.layout.activity_parent_registration);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         //create object
         etParentName = (EditText) findViewById(R.id.etParentName);
         etStudentName = (EditText) findViewById(R.id.etStudentName);
@@ -63,7 +64,7 @@ public class ParentRegistrationActivity extends AppCompatActivity implements Fir
         mAuthListener = (this);
 
 
-btn_parentSubmit.setOnClickListener(this);
+btnParentSubmit.setOnClickListener(this);
 
     }
 
@@ -98,7 +99,7 @@ btn_parentSubmit.setOnClickListener(this);
     public void onClick(View view) {
        final String parentname=etParentName.getText().toString();
         final String email = etParentEmail.getText().toString();
-       final String mobile = etParentMoile.getText().toString();
+       final String mobile = etParentMobile.getText().toString();
        final String studentname = etStudentName.getText().toString();
        final String password = etParentPassword.getText().toString();
        final String submit = btnParentSubmit.getText().toString();
@@ -117,12 +118,13 @@ btn_parentSubmit.setOnClickListener(this);
 
                 String uid = task.getResult().getUser().getUid();
                 HashMap<String, String> usermap = new HashMap<String, String>();
-                usermap.put("email", email);
                 usermap.put("parent", parentname);
                 usermap.put("student", studentname);
+                usermap.put("mobile",mobile );
+                usermap.put("email", email);
                 usermap.put("college", college);
                 usermap.put("password", password);
-                usermap.put("mobile",mobile );
+
 
                 FirebaseDatabase.getInstance().getReference("users").child(uid).
                         setValue(usermap, new DatabaseReference.CompletionListener() {

@@ -23,11 +23,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
+import static traindge.masandroidproject.R.id.etStdParent;
 import static traindge.masandroidproject.R.id.etStudentEmail;
 
 public class StudentRegistrationActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText etparentName;
+    private EditText etStdParent;
     private EditText etClgName;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -49,13 +50,15 @@ public class StudentRegistrationActivity extends AppCompatActivity implements Vi
         setSupportActionBar(toolbar);
 
         etStudentName = (EditText) findViewById(R.id.etStudentName);
-        etparentName = (EditText) findViewById(R.id.etParentName);
+        etStudentClass = (EditText)findViewById(R.id.etStudentClass);
+        etStdParent = (EditText) findViewById(R.id.etStdParent);
         etStudentMobile = (EditText)findViewById(R.id.etStudentMobile);
         etStudentEmail = (EditText)findViewById(R.id.etStudentEmail);
         etClgName = (EditText)findViewById(R.id.etClgName);
-        etStudentClass = (EditText)findViewById(R.id.etStudentClass);
         etStudentPassword = (EditText) findViewById(R.id.etStudentPassword);
         btnStudentSubmit = (Button) findViewById(R.id.btnStudentSubmit);
+
+
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -94,13 +97,13 @@ public class StudentRegistrationActivity extends AppCompatActivity implements Vi
     public void onClick(View v) {
 
         final String name = etStudentName.getText().toString();
-        final String password = etStudentPassword.getText().toString();
+        final String studentclass= etStudentClass.getText().toString();
+        final String parentName=etStdParent.getText().toString();
+        final String mobileNumber= etStudentMobile.getText().toString();
         final String email=etStudentEmail.getText().toString();
         final String college= etClgName.getText().toString();
-        final String mobileNumber= etStudentMobile.getText().toString();
-        final String studentclass= etStudentClass.getText().toString();
-        final String parentName= etparentName.getText().toString();
-        final String buttonsubmit=btnStudentSubmit.getText().toString();
+        final String password = etStudentPassword.getText().toString();
+
 
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -117,12 +120,12 @@ public class StudentRegistrationActivity extends AppCompatActivity implements Vi
 
                         String uid = task.getResult().getUser().getUid();
                         HashMap<String, String> usermap= new HashMap<String, String>();
-                        usermap.put("email",email);
-                        usermap.put("mobile",mobileNumber);
                         usermap.put("name",name);
-                        usermap.put("college",college);
                         usermap.put("class",studentclass);
                         usermap.put("parent",parentName);
+                        usermap.put("mobile",mobileNumber);
+                        usermap.put("email",email);
+                        usermap.put("college",college);
                         usermap.put("password",password);
 
                         FirebaseDatabase.getInstance().getReference("users").child(uid).setValue(usermap, new DatabaseReference.CompletionListener() {

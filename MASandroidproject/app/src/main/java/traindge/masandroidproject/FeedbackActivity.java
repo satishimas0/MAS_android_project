@@ -2,20 +2,33 @@ package traindge.masandroidproject;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
-public class FeedbackActivity extends AppCompatActivity {
+public class FeedbackActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btn_feedback_send;
+    private TextView tvfeedbackMsg;
+    private EditText etSubjectFeedback;
+    private Button btnFeedbackSend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feddback);
-        EditText et_subjectfeedback=(EditText)findViewById(R.id.et_subjectfeedback);
-        EditText tvfeedbackMsg=(EditText)findViewById(R.id.tvfeedbackMsg);
-        btn_feedback_send = (Button) findViewById(R.id.btn_feedback_send);
+
+        // object create
+        etSubjectFeedback = (EditText) findViewById(R.id.etSubjectFeedback);
+        tvfeedbackMsg = (TextView) findViewById(R.id.tvfeedbackMsg);
+        btnFeedbackSend = (Button) findViewById(R.id.btnFeedbackSend);
+
         //create onclicklistener
+        btnFeedbackSend.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
