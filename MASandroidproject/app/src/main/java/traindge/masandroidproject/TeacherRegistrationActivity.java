@@ -1,10 +1,8 @@
 package traindge.masandroidproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -29,7 +27,6 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
     public static final String TAG = "TeacherRegistration";
     private EditText etTchrName;
     private EditText etTchrMobile;
-    private EditText etTchrEmail_id;
     private EditText etClgName;
     private EditText etHqualification;
     private EditText etTchrPassword;
@@ -37,6 +34,7 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
 
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseAuth mAuth;
+    private EditText etTchrEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +46,7 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
         //create object
         etTchrName = (EditText) findViewById(R.id.etTchrName);
         etTchrMobile = (EditText) findViewById(R.id.etTchrMobile);
-        etTchrEmail_id = (EditText) findViewById(R.id.etTchrEmail_id);
+        etTchrEmail = (EditText) findViewById(R.id.etTchrEmail);
         etClgName = (EditText) findViewById(R.id.etClgName);
         etHqualification = (EditText) findViewById(R.id.etHqualification);
         etTchrPassword = (EditText) findViewById(R.id.etTchrPassword);
@@ -90,8 +88,15 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnTchrSubmit:
+                Intent subIntent = new Intent(TeacherRegistrationActivity.this, ClassManagementSystemActivity.class);
+                startActivity(subIntent);
+                break;
 
-        final String email = etTchrEmail_id.getText().toString();
+
+        }
+        final String email = etTchrEmail.getText().toString();
         final String password = etTchrPassword.getText().toString();
         final String TeacherName = etTchrName.getText().toString();
         final String college = etClgName.getText().toString();

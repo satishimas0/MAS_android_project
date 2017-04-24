@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawableLeft="@drawable/user_id_icon"
             android:ems="20"
             android:gravity="center"
             android:hint="Teacher Name"
@@ -75,6 +75,7 @@
             android:gravity="center"
             android:hint="Mobile Number"
             android:inputType="textPersonName"
+            android:phoneNumber="true"
             android:textAlignment="gravity"
             android:textColor="@android:color/white"
             android:textColorHint="#aaa"
@@ -84,7 +85,7 @@
             tools:layout_editor_absoluteY="118dp" />
 
         <EditText
-            android:id="@+id/etTchrEmail_id"
+            android:id="@+id/etTchrEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -148,9 +149,11 @@
             android:gravity="center"
             android:hint="Password"
             android:inputType="textPersonName"
+            android:password="true"
             android:textAlignment="gravity"
             android:textColor="@android:color/white"
             android:textColorHint="#aaa"
+            android:textColorLink="@color/common_google_signin_btn_text_dark_focused"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="88dp"

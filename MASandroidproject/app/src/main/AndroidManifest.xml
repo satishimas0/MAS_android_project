@@ -38,7 +38,14 @@
             android:name=".ParentRegistrationActivity"
             android:label="@string/title_activity_parent_registration"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ClassSystemActivity"></activity>
+        <activity
+            android:name=".ClassManagementSystemActivity"
+            android:label="@string/title_activity_class_management_system"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NoticeSystemActivity"
+            android:label="@string/title_activity_notice_system"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -8,20 +8,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-<<<<<<< HEAD
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
-=======
->>>>>>> 44a1e5f47702afdb1b82c35f37227abc810df8c4
 
 public class ParentRegistrationActivity extends AppCompatActivity implements FirebaseAuth.AuthStateListener, View.OnClickListener {
 
@@ -53,7 +51,6 @@ public class ParentRegistrationActivity extends AppCompatActivity implements Fir
         setSupportActionBar(toolbar);
 
         //create object
-<<<<<<< HEAD
         etParentName = (EditText) findViewById(R.id.etParentName);
         etStudentName = (EditText) findViewById(R.id.etStudentName);
         etParentMobile = (EditText) findViewById(R.id.etParentMobile);
@@ -61,14 +58,6 @@ public class ParentRegistrationActivity extends AppCompatActivity implements Fir
         etClgName = (EditText) findViewById(R.id.etClgName);
         etParentPassword = (EditText) findViewById(R.id.etParentPassword);
         btnParentSubmit = (Button) findViewById(R.id.btnParentSubmit);
-=======
-        et_parent = (EditText) findViewById(R.id.etParentName);
-        etStudentName = (EditText) findViewById(R.id.etStudentName);
-        etParentMoile = (EditText) findViewById(R.id.etParentMobile);
-        etParentEmail_id = (EditText) findViewById(R.id.etParentEmail);
-        etClgName = (EditText) findViewById(R.id.etClgName);
-        btn_parentSubmit = (Button) findViewById(R.id.btnParentSubmit);
->>>>>>> 44a1e5f47702afdb1b82c35f37227abc810df8c4
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -115,7 +104,7 @@ btnParentSubmit.setOnClickListener(this);
        final String password = etParentPassword.getText().toString();
        final String submit = btnParentSubmit.getText().toString();
        final String college = etClgName.getText().toString();
-<<<<<<< HEAD
+
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -148,8 +137,6 @@ btnParentSubmit.setOnClickListener(this);
                         });
 
             }
-=======
->>>>>>> 44a1e5f47702afdb1b82c35f37227abc810df8c4
 
         });
     }

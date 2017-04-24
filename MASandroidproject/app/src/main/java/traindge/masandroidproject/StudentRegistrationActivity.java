@@ -21,18 +21,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
-<<<<<<< HEAD
 import static traindge.masandroidproject.R.id.etStdParent;
 import static traindge.masandroidproject.R.id.etStudentEmail;
 
 public class StudentRegistrationActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText etStdParent;
-=======
-public class StudentRegistrationActivity extends AppCompatActivity implements View.OnClickListener {
 public static final String TAG="StudentRegistration";
     private EditText etparentName;
->>>>>>> 44a1e5f47702afdb1b82c35f37227abc810df8c4
     private EditText etClgName;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
