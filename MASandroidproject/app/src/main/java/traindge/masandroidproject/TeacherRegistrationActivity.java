@@ -27,14 +27,15 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
     public static final String TAG = "TeacherRegistration";
     private EditText etTchrName;
     private EditText etTchrMobile;
+    private EditText etTchrEmail;
     private EditText etClgName;
     private EditText etHqualification;
     private EditText etTchrPassword;
     private Button btnTchrSubmit;
 
+
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseAuth mAuth;
-    private EditText etTchrEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,12 +97,12 @@ public class TeacherRegistrationActivity extends AppCompatActivity implements Vi
 
 
         }
-        final String email = etTchrEmail.getText().toString();
-        final String password = etTchrPassword.getText().toString();
         final String TeacherName = etTchrName.getText().toString();
+        final String mobileNumber = etTchrMobile.getText().toString();
+        final String email = etTchrEmail.getText().toString();
         final String college = etClgName.getText().toString();
         final String HQualification = etHqualification.getText().toString();
-        final String mobileNumber = etTchrMobile.getText().toString();
+        final String password = etTchrPassword.getText().toString();
         Log.e(TAG,email);
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

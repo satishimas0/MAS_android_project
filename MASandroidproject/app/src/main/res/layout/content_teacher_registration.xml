@@ -75,7 +75,7 @@
             android:gravity="center"
             android:hint="Mobile Number"
             android:inputType="textPersonName"
-            android:phoneNumber="true"
+            android:phoneNumber="false"
             android:textAlignment="gravity"
             android:textColor="@android:color/white"
             android:textColorHint="#aaa"

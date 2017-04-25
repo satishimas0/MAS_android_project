@@ -52,6 +52,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnForgtPassword = (Button) findViewById(R.id.btnForgtPassword);
         btnSignUp = (Button) findViewById(R.id.btnSignUp);
 
+
+
+
         //mAuth = FirebaseAuth.getInstance();
 
         // important part
@@ -122,6 +125,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
+    }
+
+    private class SmartUser {
     }
 }
 
