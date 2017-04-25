@@ -28,4 +28,6 @@
     <string name="title_activity_class_system">classSystemActivity</string>
     <string name="title_activity_class_management_system">ClassManagementSYstemActivity</string>
     <string name="title_activity_notice_system">NoticeSystemActivity</string>
+    <string name="title_activity_report">Report</string>
+    <string name="title_activity_student_attendance">StudentAttendance</string>
 </resources>
