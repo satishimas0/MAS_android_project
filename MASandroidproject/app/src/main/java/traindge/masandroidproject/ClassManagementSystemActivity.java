@@ -18,7 +18,7 @@ import java.util.List;
 
 import static traindge.masandroidproject.R.id.parent;
 
-public abstract class ClassManagementSystemActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class ClassManagementSystemActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private EditText etClass;
     private Spinner spiYear;
@@ -35,6 +35,7 @@ public abstract class ClassManagementSystemActivity extends AppCompatActivity im
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_class_management_system);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
