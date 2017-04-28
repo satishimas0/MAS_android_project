@@ -29,19 +29,20 @@
     <string name="title_activity_class_management_system">ClassManagementSystemActivity</string>
     <string name="title_activity_notice_system">NoticeSystemActivity</string>
     <string name="title_activity_student_report">StudentReportActivity</string>
-<string-array name="year">
-    <item>I_sem</item>
-    <item>II_sem</item>
-    <item>III_sem</item>
-    <item>IV_sem</item>
-    <item>V_sem</item>
-    <item>VI_sem</item>
-    <item>VII_sem</item>
-    <item>VIII_sem</item>
-    <item>1_year</item>
-    <item>2_year</item>
-    <item>3_year</item>
-    <item>none</item>
+    <string-array name="year">
+        <item>I_sem</item>
+        <item>II_sem</item>
+        <item>III_sem</item>
+        <item>IV_sem</item>
+        <item>V_sem</item>
+        <item>VI_sem</item>
+        <item>VII_sem</item>
+        <item>VIII_sem</item>
+        <item>1_year</item>
+        <item>2_year</item>
+        <item>3_year</item>
+        <item>none</item>
     </string-array>
+    <string name="title_activity_notice_message">NoticeMessageActivity</string>
 
-   </resources>
+</resources>

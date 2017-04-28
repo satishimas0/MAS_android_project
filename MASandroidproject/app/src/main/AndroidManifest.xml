@@ -49,6 +49,10 @@
         <activity
             android:name=".StudentNoticeActivity"
             android:label="@string/title_activity_student_report"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NoticeMessageActivity"
+            android:label="@string/title_activity_notice_message"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
