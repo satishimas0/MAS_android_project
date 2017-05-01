@@ -1,5 +1,7 @@
 package traindge.masandroidproject;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -64,7 +66,7 @@ public class ParentRegistrationActivity extends AppCompatActivity implements Fir
         mAuthListener = (this);
 
 
-btnParentSubmit.setOnClickListener(this);
+       btnParentSubmit.setOnClickListener(this);
 
     }
 
@@ -74,6 +76,11 @@ btnParentSubmit.setOnClickListener(this);
         if (user != null) {
             //user is signed in
             Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+            Intent subIntent = new Intent(ParentRegistrationActivity.this, ReportDaysActivity.class);
+            startActivity(subIntent);
+            finish();
+
+
         } else {
             //user is signed out
             Log.d(TAG, "onAuthStateChanged:signed_out");
@@ -104,10 +111,18 @@ btnParentSubmit.setOnClickListener(this);
        final String password = etParentPassword.getText().toString();
        final String submit = btnParentSubmit.getText().toString();
        final String college = etClgName.getText().toString();
+        Log.e(TAG, email);
+        final ProgressDialog dialog = new ProgressDialog(this);
+        dialog.setMessage("please wait while we update");
+        dialog.show();
 
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
+                Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
+                dialog.setMessage("updating database");
 
                 // If sign in fails, display a message to the user. If sign in succeeds
                 // the auth state listener will be notified and logic to handle the
@@ -115,29 +130,36 @@ btnParentSubmit.setOnClickListener(this);
                 if (!task.isSuccessful()) {
                     Toast.makeText(ParentRegistrationActivity.this, R.string.auth_failed,
                             Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
                 }
-
-                String uid = task.getResult().getUser().getUid();
-                HashMap<String, String> usermap = new HashMap<String, String>();
-                usermap.put("parent", parentname);
-                usermap.put("student", studentname);
-                usermap.put("mobile",mobile );
-                usermap.put("email", email);
-                usermap.put("college", college);
-                usermap.put("password", password);
+                if (task.isSuccessful()) {
+                    dialog.dismiss();
 
 
-                FirebaseDatabase.getInstance().getReference("users").child(uid).
-                        setValue(usermap, new DatabaseReference.CompletionListener() {
-                            @Override
-                            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                                Toast.makeText(ParentRegistrationActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                    String uid = task.getResult().getUser().getUid();
+                    HashMap<String, String> usermap = new HashMap<String, String>();
+                    usermap.put("parent", parentname);
+                    usermap.put("student", studentname);
+                    usermap.put("mobile", mobile);
+                    usermap.put("email", email);
+                    usermap.put("college", college);
+                    usermap.put("password", password);
 
-                            }
-                        });
 
+                    FirebaseDatabase.getInstance().getReference("users").child(uid).
+                            setValue(usermap, new DatabaseReference.CompletionListener() {
+                                @Override
+                                public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                    Toast.makeText(ParentRegistrationActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+
+
+                                }
+                            });
+                }
             }
 
+
         });
+
     }
 }

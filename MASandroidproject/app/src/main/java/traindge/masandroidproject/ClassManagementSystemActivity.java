@@ -1,5 +1,6 @@
 package traindge.masandroidproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,7 +19,7 @@ import java.util.List;
 
 import static traindge.masandroidproject.R.id.parent;
 
-public class ClassManagementSystemActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class ClassManagementSystemActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     private EditText etClass;
     private Spinner spiYear;
@@ -52,7 +53,7 @@ public class ClassManagementSystemActivity extends AppCompatActivity implements 
 
 
 
-
+btnClassSystmContinue.setOnClickListener(this);
 
 //dropdown list in spinner
         spiYear = (Spinner) findViewById(R.id.spiYear);
@@ -70,5 +71,16 @@ public class ClassManagementSystemActivity extends AppCompatActivity implements 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnClassSystmContinue:
+                Intent subIntent=new Intent(ClassManagementSystemActivity.this,StudentAttendanceActivity.class);
+                startActivity(subIntent);
+                break;
+
+        }
     }
 }

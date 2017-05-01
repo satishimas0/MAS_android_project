@@ -30,7 +30,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
-
+    public static final String TAG = "Login";
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -55,29 +55,33 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
 
-        //mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
-        // important part
-       //mAuthListener = new FirebaseAuth.AuthStateListener() {
-         //   @Override
-           // public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-             //   FirebaseUser user = firebaseAuth.getCurrentUser();
-               // if (user != null) {
+        //important part
+       mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+
+
+                if (user != null) {
                     // User is signed in
-                 //   Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                   // Intent homeIntent = new Intent(LoginActivity.this, FeedbackActivity.class);
-                    //startActivity(homeIntent);
-                    //finish();
-               // } else {
+                  Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                    Intent homeIntent = new Intent(LoginActivity.this, FeedbackActivity.class);
+                    startActivity(homeIntent);
+                    finish();
+                } else {
                     // User is signed out
-               //     Log.d(TAG, "onAuthStateChanged:signed_out");
-                //}
+                   Log.d(TAG, "onAuthStateChanged:signed_out");
+                }
 
-         //   }
-        //};
+           }
+        };
 
         //final line
         btnSignUp.setOnClickListener(this);
+        btnLogin.setOnClickListener(this);
+        btnForgtPassword.setOnClickListener(this);
 
     }
 
@@ -102,7 +106,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which) {
                             case 0:
-                                //// TODO: 4/5/2017 Student registration
                                 Intent subIntent = new Intent(LoginActivity.this, StudentRegistrationActivity.class);
                                 startActivity(subIntent);
                                 break;

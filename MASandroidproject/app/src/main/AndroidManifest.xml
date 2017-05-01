@@ -53,6 +53,14 @@
         <activity
             android:name=".NoticeMessageActivity"
             android:label="@string/title_activity_notice_message"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GraphReportActivity"
+            android:label="@string/title_activity_graph_report"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ReportDaysActivity"
+            android:label="@string/title_activity_report_days"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
